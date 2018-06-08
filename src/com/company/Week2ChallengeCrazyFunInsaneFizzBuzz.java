@@ -13,7 +13,9 @@ public class Week2ChallengeCrazyFunInsaneFizzBuzz {
         //print();
         //shazam();
         //takelong();
-        seven();
+        //seven();
+        bonus();
+        //shazam2();
     }
     private static void print()
     {
@@ -112,6 +114,62 @@ public class Week2ChallengeCrazyFunInsaneFizzBuzz {
         else if (Math.abs(array[0] - array[inputnumber-1]) < 10 ) //<
         {
             System.out.print("This won't take long");
+        }
+    }
+    private static void bonus()
+    {
+        //System.out.print("bonus");
+
+        for (int i = 1; i < 31 ; i ++)
+        {
+            if (i >=10 && (i % 10 ==0  || i % 10 == 6))
+            {
+                System.out.println("rock ");
+            }
+            //System.out.print(i + " ");
+            else if (i >10 && (i % 10 == 2 ||  i % 10 == 8))
+            {
+                System.out.println("paper");
+            }
+            else if (i >10 && (i % 10  == 4))
+            {
+                System.out.println("siccors");
+            }
+            else
+            {
+                System.out.println(i + " ");
+            }
+        }
+    }
+    private static void shazam2()
+    {
+        System.out.println("how many numbers?: ");
+        int inputnumber = keyboard.nextInt();
+
+        int array[] = new int[inputnumber]; //[]
+        System.out.println("random number of "+ inputnumber);
+
+        for (int i = 0; i < inputnumber ; i ++)
+        {
+            array[i] = 1+ random.nextInt(100); //[i= ]//3 100 2
+        }
+        for (int temp: array)
+        {
+            if (temp % 5 ==0 )//(temp == 2)
+            {
+                System.out.print("buzz ");
+            }
+            else if (temp % 3 == 0)
+            {
+                System.out.print("fizz ");
+            }
+            else {
+                System.out.print(temp + "\t");
+            }
+        }
+        if (array[0] == array[inputnumber-1])
+        {
+            System.out.print("Shazam!!");
         }
     }
 }
